@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: white;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.toggle {
+    margin-right: 20px;
+}
+
+.toggle label {
+    margin-right: 10px;
+}
+
+.main {
+    padding: 20px;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.movie {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.movie p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+
+
+
+.delete-from-lib {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .delete-from-lib:hover {
+    background-color: darkred;
+  }
+  

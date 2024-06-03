@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+</head>
+<body>
+
+    <nav>
+
+        <div class="logo">
+            <img src="/assests/logoBg.png" alt="logo" class="logo">
+        </div>
+
+        <div class="title">
+            <h1>Movies PlayList</h1>
+        </div>
+
+        <div class="extra">
+
+            <div class="buttons">
+                
+                <a class="styled-button" href="/yourlibrary">Your Library</a>
+                <a class="styled-button" href="/logout">Logout</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+
+
+
+
+
+    <div class="main">
+        <input type="text" placeholder="Search Movies" class="inp">
+        <input type="hidden" id="userId" value="<%= user.id %>">
+        <div class="results"></div>
+    </div>
+    <script src="/js/home.js"></script>
+</body>
+</html>

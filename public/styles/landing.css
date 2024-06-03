@@ -1,0 +1,141 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+nav{
+    width: 100vw;
+    height: 13vh;
+    background-color:  #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title{
+    color: red;
+    text-decoration: wavy;
+    margin-left: 20px;
+    font-family: "Major Mono Display", monospace;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.extra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.styled-button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button:hover {
+    background-color: #0056b3;
+}
+
+.styled-button:active {
+    background-color: #003a75;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    height: 13vh;
+    width: 10vw;
+    
+}
+
+.main{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-image: url("../assests/main-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.img2, .img1{
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.text{
+    text-align: center;
+    margin-top: 20px;
+    color: #2F3C7E;
+    background-color: white;
+}
+
+footer{
+   
+    width: 100vw;
+    height: 10vh;
+    background-color: #010951;
+    text-align: center;
+    padding: 20px;
+    color: white;
+
+}
+
+.styled-butto{
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .text{
+        margin-top: 80px;
+    }
+
+    .logo{
+        text-align: center;
+        height: 10vh;
+        width: 10vw;
+        
+    }
+    
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

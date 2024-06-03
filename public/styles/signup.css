@@ -1,0 +1,230 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 1;
+}
+
+.main:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.inp {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.inp label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.inp input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.inp input:focus {
+    border-color: #2F3C7E;
+    outline: none;
+    box-shadow: 0 0 5px rgba(47, 60, 126, 0.5);
+}
+
+.btn , .name{
+    text-align: center;
+}
+
+button{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.already{
+    margin: 10px;
+}
+
+.already-text{
+    margin: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    height: 13vh;
+    width: 10vw;
+   
+}
+
+.title{
+    color: white;
+    text-decoration: wavy;
+    margin-left: 20px;
+    font-family: "Major Mono Display", monospace;
+    margin-right: 43%;
+}
+
+
+@media (max-width: 768px) {
+
+    .title{
+        margin-right: 38%;
+    }
+    
+}
+
+
+nav{
+    width: 100vw;
+    height: 13vh;
+    background-color:  white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.title{
+    color: red;
+    text-decoration: wavy;
+    margin-left: 20px;
+    font-family: "Major Mono Display", monospace;
+}
+
+.extra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.styled-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button:hover {
+    background-color: #0056b3;
+}
+
+.styled-button:active {
+    background-color: #003a75;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    height: 13vh;
+    width: 10vw;
+    
+}
+
+
+.text{
+    text-align: center;
+    margin-top: 20px;
+    color: #2F3C7E;
+    background-color: white;
+}
+
+footer{
+   
+    width: 100vw;
+    height: 10vh;
+    background-color: #010951;
+    text-align: center;
+    padding: 20px;
+    color: white;
+
+}
+
+.styled-butto{
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .text{
+        margin-top: 80px;
+    }
+
+    .logo{
+        text-align: center;
+        height: 10vh;
+        width: 10vw;
+        
+    }
+    
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

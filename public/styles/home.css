@@ -1,0 +1,280 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/assests/singupBG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.inp {
+    text-align: center;
+    width: 80vw;
+    max-width: 500px;
+    height: 50px;
+    margin-top: 150px;
+    padding: 2px 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+}
+
+.inp:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.results {
+    width: 80vw;
+    max-width: 600px;
+    height: 60vh; 
+    overflow-x: hidden; 
+    border-radius: 10px;
+    overflow-y: visible;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 460px;
+}
+
+.movie {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.movie-poster {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.movie-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+
+.add-to-lib {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-lib:disabled {
+    cursor: not-allowed;
+  }
+  
+  .add-to-lib:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+
+
+  .navbar {
+    background-color: white;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.logo img {
+    height: 100px; 
+    width: auto;
+}
+
+
+
+.library-button button, .menu button {
+
+    color: black;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.library-button button:hover, .menu button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    margin-left: auto; 
+}
+
+.menu button {
+    font-size: 16px;
+    margin-left: 10px; 
+    color: black;
+}
+
+
+
+nav{
+    width: 100vw;
+    height: 13vh;
+    background-color:  white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.title{
+    color: red;
+    text-decoration: wavy;
+    margin-left: 20px;
+    font-family: "Major Mono Display", monospace;
+}
+
+.extra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.styled-button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button:hover {
+    background-color: #0056b3;
+}
+
+.styled-button:active {
+    background-color: #003a75;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.text{
+    text-align: center;
+    margin-top: 20px;
+    color: #2F3C7E;
+    background-color: white;
+}
+
+footer{
+   
+    width: 100vw;
+    height: 10vh;
+    background-color: #010951;
+    text-align: center;
+    padding: 20px;
+    color: white;
+
+}
+
+.styled-butto{
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo{
+        text-align: center;
+        height: 10vh;
+        width: 10vw;
+        
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        height: 20px;
+        width: 20px;
+        margin-bottom: 80px;
+    }
+    
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+

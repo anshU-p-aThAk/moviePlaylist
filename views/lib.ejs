@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Library</title>
+    <link rel="stylesheet" href="../styles/lib.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/assests/logoBg.png" alt="Logo">
+        </div>
+        <div class="title">
+            Your Library
+        </div>
+        <div class="toggle">
+            <label for="list-toggle">Private List:</label>
+            <input type="checkbox" id="list-toggle" onchange="updatePrivacy()">
+        </div>
+    </nav>
+    <div class="main">
+        <div class="movie-container">
+            <% user.movies.forEach(movie => { %>
+                <div class="movie">
+                    <img src="<%= movie.poster %>" alt="<%= movie.title %>">
+                    <div class="movie-info">
+                        <h3><%= movie.title %></h3>
+                        <p>Year: <%= movie.year %></p>
+                        <p>Type: <%= movie.type %></p>
+                        <button class="delete-from-lib" onclick="deleteFromLibrary('<%= movie._id %>', this)">Delete</button>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <script>
+        function updatePrivacy() {
+            const isChecked = document.getElementById('list-toggle').checked;
+            fetch('/user/updatePrivacy', { // Ensure the route prefix matches your setup
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ isPrivate: isChecked })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response error ' + response.statusText);
+                }
+                console.log('Privacy updated successfully');
+            })
+            .catch(error => {
+                console.error('Error updating privacy:', error);
+            });
+        }
+
+        function deleteFromLibrary(movieId, button) {
+            fetch('/deleteFromLib', { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ movieId: movieId })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response error ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Movie deleted from library:', data);
+                // Remove the movie div from the DOM
+                const movieDiv = button.closest('.movie');
+                movieDiv.remove();
+            })
+            .catch(error => {
+                console.error('Error deleting movie:', error);
+            });
+        }
+
+        window.addEventListener('load', () => {
+            fetch('/user/getPrivacy') // Ensure the route prefix matches your setup
+            .then(response => response.json())
+            .then(data => {
+                const isPrivate = data.isPrivate;
+                document.getElementById('list-toggle').checked = isPrivate;
+            })
+            .catch(error => {
+                console.error('Error fetching privacy setting:', error);
+            });
+        });
+    </script>
+</body>
+</html>
